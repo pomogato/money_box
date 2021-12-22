@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "85720391402",
+    "project_id": "moneybox-d544a",
+    "storage_bucket": "moneybox-d544a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:85720391402:android:4e491b08f628636ca70193",
+        "android_client_info": {
+          "package_name": "com.example.money_box"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "85720391402-lbebbo4culvtqtdkdal0ki06kqqsu65o.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.money_box",
+            "certificate_hash": "0660937ae1b1e875bd57e2e5989a687a1c230cb9"
+          }
+        },
+        {
+          "client_id": "85720391402-d1fuaqr7ra8kbtr7k10dqi7e8qilsib2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBb8_DZkato88fOjKr5-7u0xoVottvPtO4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "85720391402-d1fuaqr7ra8kbtr7k10dqi7e8qilsib2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
