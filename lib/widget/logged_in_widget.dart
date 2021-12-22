@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:money_box/provider/google_sign_in.dart';
 import 'package:money_box/style/colors.dart';
@@ -95,9 +96,8 @@ class LoggedInWidget extends StatelessWidget {
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                     children: <Widget>[
                                       Flexible(
-                                        flex: 2,
-                                        child: Padding(
-                                          padding: const EdgeInsets.fromLTRB(0,0,0,0),
+                                        flex: 1,
+
                                           child: Stack(
                                               alignment: Alignment.center,
                                               children:
@@ -124,11 +124,11 @@ class LoggedInWidget extends StatelessWidget {
                                                   fontSize: 18, color: Colors.white,),),
                                               ]
                                           ),
-                                        ),
                                       ),
-                                      const SizedBox(width: 10,),
+                                      const SizedBox(width: 5,),
                                       Flexible(
-                                        flex: 6,
+                                        flex: 3,
+                                        fit: FlexFit.tight,
                                         child: Column(
                                           crossAxisAlignment: CrossAxisAlignment.start,
                                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -147,9 +147,10 @@ class LoggedInWidget extends StatelessWidget {
                                         ),
                                       ),
 
-                                       Spacer(flex: 1,),
+                                       //Spacer(flex: 1,),
                                        Flexible(
-                                         flex: 3,
+                                         flex: 2,
+
                                          child: Column(
                                             crossAxisAlignment: CrossAxisAlignment.end,
                                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,

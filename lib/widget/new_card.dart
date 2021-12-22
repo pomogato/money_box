@@ -5,6 +5,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:money_box/style/colors.dart';
 import 'package:money_box/style/text.dart';
+import 'package:money_box/widget/date_dialog.dart';
 
 class NewCard extends StatelessWidget {
 
@@ -15,6 +16,10 @@ class NewCard extends StatelessWidget {
   int _sum;
   int _last_sum;
   int _min_sum = 0;
+  String formatDateTime(DateTime dateTime){
+    return '${dateTime.day}/${dateTime.month}/${dateTime.year}';
+  }
+
   @override
   Widget build(BuildContext context) {
     final user = FirebaseAuth.instance.currentUser;
@@ -169,61 +174,49 @@ backgroundColor: StyleColor.background,
               ],
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text("Крайний срок пополнения",style: StyleText.title_appBar),
-                SizedBox(width: 15,),
-                Expanded(
-                  flex: 2,
-                  child: TextField(
-                    style: StyleText.title_appBar,
-                    cursorHeight: 16,
-                    keyboardType: TextInputType.number,
-                    textInputAction: TextInputAction.next,
-                    textAlignVertical: TextAlignVertical.top,
-                    textAlign:TextAlign.right,
-                    // controller: _section_id,
-                    onChanged: (_) {
+                const SizedBox(width: 15,),
 
-                    },
-                    decoration: InputDecoration(
-                      hintText: '00/00/2021',
-                      hintStyle:StyleText.title_appBar,
-                      border:  const UnderlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(5)),
-                      ),
-                    ),
+                  TextButton(
+                      onPressed: () async {
+                        final result =  await showDialog(
+                            context: context,
+                            builder: (_) => dateDialog(res: DateTime.now(),));
+                      //   if(result != false){
+                      //     setState(() {
+                      //       DateLast = result;
+                      //     });}
+                      //   plateshSet();
+                      //
+                       },
+                      child:
+                      Text("${formatDateTime(DateTime.now())}",style: StyleText.title_appBar)),
 
-                  ),
-                ),
+
               ],
             ),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text("Дата уведомления",style: StyleText.title_appBar),
-                SizedBox(width: 15,),
-                Expanded(
-                  flex: 2,
-                  child: TextField(
-                    style: StyleText.title_appBar,
-                    cursorHeight: 16,
-                    keyboardType: TextInputType.text,
-                    textInputAction: TextInputAction.next,
-                    textAlignVertical: TextAlignVertical.top,
-                    textAlign:TextAlign.right,
-                    // controller: _section_id,
-                    onChanged: (_) {
-
+                const SizedBox(width: 15,),
+                TextButton(
+                    onPressed: () async {
+                      final result =  await showDialog(
+                          context: context,
+                          builder: (_) => dateDialog(res: DateTime.now(),));
+                      //   if(result != false){
+                      //     setState(() {
+                      //       DateLast = result;
+                      //     });}
+                      //   plateshSet();
+                      //
                     },
-                    decoration: InputDecoration(
-                      hintText: '00/00/2021',
-                      hintStyle:StyleText.title_appBar,
-                      border:  const UnderlineInputBorder(
-                        borderRadius: BorderRadius.all(Radius.circular(5)),
-                      ),
-                    ),
+                    child:
+                    Text("${formatDateTime(DateTime.now())}",style: StyleText.title_appBar)),
 
-                  ),
-                ),
 
 
               ],
