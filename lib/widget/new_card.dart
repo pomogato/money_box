@@ -229,26 +229,7 @@ backgroundColor: StyleColor.background,
                 const SizedBox(width: 15,),
 
                 DropDown(),
-                  // child: TextField(
-                  //   style: StyleText.title_appBar,
-                  //   cursorHeight: 16,
-                  //   keyboardType: TextInputType.text,
-                  //   textInputAction: TextInputAction.next,
-                  //   textAlignVertical: TextAlignVertical.top,
-                  //   textAlign:TextAlign.right,
-                  //   // controller: _section_id,
-                  //   onChanged: (_) {
-                  //
-                  //   },
-                  //   decoration: InputDecoration(
-                  //     hintText: 'BYN',
-                  //     hintStyle:StyleText.title_appBar,
-                  //     border:  const UnderlineInputBorder(
-                  //       borderRadius: BorderRadius.all(Radius.circular(5)),
-                  //     ),
-                  //   ),
-                  //
-                  // ),
+
 
 
               ],
@@ -270,61 +251,7 @@ backgroundColor: StyleColor.background,
 
               ],
             ),
-           // razdelitel(),
 
-
-            // Padding(
-            //   padding: EdgeInsets.all(15),
-            //   child: TextField(
-            //     textAlignVertical: TextAlignVertical.bottom,
-            //     style: TextStyle(fontSize: 16,color: Colors.white),
-            //     cursorHeight: 16,
-            //     onChanged: (String value){
-            //       _name = value;
-            //     },
-            //     decoration:  const InputDecoration(
-            //       fillColor: Colors.grey,
-            //       filled: true,
-            //       hintText: 'Название',
-            //       hintStyle:TextStyle(fontSize: 16,color: Colors.white,),
-            //       border:  OutlineInputBorder(
-            //         borderRadius: BorderRadius.all(Radius.circular(20.0)),
-            //       ),
-            //     ),
-            //
-            //   ),
-            // ),
-            // Padding(
-            //   padding: EdgeInsets.all(15),
-            //   child: TextField(
-            //     keyboardType: TextInputType.number,
-            //     textAlignVertical: TextAlignVertical.bottom,
-            //     style: TextStyle(fontSize: 16,color: Colors.white),
-            //     cursorHeight: 16,
-            //     controller: _num_controler,
-            //     decoration:  const InputDecoration(
-            //       fillColor: Colors.grey,
-            //       filled: true,
-            //       hintText: 'значение',
-            //       hintStyle:TextStyle(fontSize: 16,color: Colors.white,),
-            //       border:  OutlineInputBorder(
-            //         borderRadius: BorderRadius.all(Radius.circular(20.0)),
-            //       ),
-            //     ),
-            //
-            //   ),
-            // ),
-            // TextButton(
-            //   onPressed: () =>{
-            //     _sum = int.tryParse(_num_controler.text),
-            //     FirebaseFirestore.instance.collection(user.email).add({'item': _name,'sum': _sum}),
-            //
-            //     Navigator.pop(context, false),
-            //   },
-            //
-            //   child:
-            //   const Text("Сохранить",style: TextStyle(fontSize: 14,color: Colors.white60,fontWeight: FontWeight.bold)),
-            // ),
           ],
         ),
     ),

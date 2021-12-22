@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:money_box/style/colors.dart';
 
 class dateDialog extends StatefulWidget{
   final  DateTime res;
@@ -13,26 +14,28 @@ class dateDialog extends StatefulWidget{
 }
 
 class _dateDialogState extends State<dateDialog> {
-  TextStyle styleTitle = TextStyle(fontSize: 20,color: Colors.white60,);
+  TextStyle styleTitle = const TextStyle(fontSize: 20,color: Colors.black,);
   DateTime DateRes= DateTime.now();
 
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      backgroundColor: Colors.grey,
+      backgroundColor: StyleColor.white,
+      contentPadding: EdgeInsets.all(5),
       content: Container(
-        height: 150,
-        width: MediaQuery.of(context).size.width,
+        height: 200,
+
         child: CupertinoDatePicker(
-          backgroundColor: Colors.grey,
-          mode: CupertinoDatePickerMode.date,
-          initialDateTime: widget.res,
-          minimumYear: 2021,
-          maximumYear: 2300,
-          onDateTimeChanged: (DateTime newDateTime) {
-            DateRes = newDateTime;
-          },
-        ),
+            backgroundColor: StyleColor.white,
+            mode: CupertinoDatePickerMode.date,
+            initialDateTime: widget.res,
+            minimumYear: 2021,
+            maximumYear: 2300,
+            onDateTimeChanged: (DateTime newDateTime) {
+              DateRes = newDateTime;
+            },
+          ),
+
       ),
       actions: <Widget>[
         FlatButton(onPressed: () {
