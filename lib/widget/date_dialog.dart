@@ -2,6 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:money_box/style/colors.dart';
 
+//попап времени
+
 class dateDialog extends StatefulWidget{
   final  DateTime res;
 
